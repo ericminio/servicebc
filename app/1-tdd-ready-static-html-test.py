@@ -11,7 +11,7 @@ class TddReadyStaticHtml(unittest.TestCase):
     def test_home_page_can_be_reached(self):        
         self.assertEqual(self.response.status_code, 200)
 
-    def test_index(self):        
+    def test_expected_greetings(self):        
         page = pq(self.response.data)
         
         self.assertEqual(page('#greetings').text(), 'Hello, Service BC :)')
